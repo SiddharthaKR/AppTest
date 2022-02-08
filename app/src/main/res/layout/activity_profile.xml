@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    android:background="#00010D">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+
+        <ImageButton
+            android:id="@+id/backbtn"
+            android:layout_width="41dp"
+            android:layout_height="48dp"
+            android:padding="16dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="12dp"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:id="@+id/shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:fontFamily="@font/clash_700"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/backbtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout"
+            android:paddingBottom="80dp">
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/profile_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile_img"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.054" />
+
+            <ImageView
+                android:id="@+id/edit_dp_button"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:src="@drawable/ic_edit_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/profile_image"
+                app:layout_constraintTop_toBottomOf="@id/profile_image"
+                android:layout_marginTop="-40dp"
+                android:layout_marginStart="-40dp"/>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Username"
+                android:textColor="@color/white"
+                android:fontFamily="@font/clash_700"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/profile_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_height="370dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/blur_rectangle"
+                android:orientation="vertical"
+                app:flow_horizontalAlign="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_name"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/interests_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Select your interests"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textFontWeight="700"
+                    android:fontFamily="@font/hk_grotesk"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:id="@+id/interests_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/interests_heading">
+
+                    <LinearLayout style="@style/interests_horizontal_container">
+                        <TextView android:text="Dance" style="@style/select_interest_item_profile" />
+                        <TextView android:text="Music" style="@style/select_interest_item_profile" />
+                        <TextView android:text="Traditional" style="@style/select_interest_item_profile" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/interests_horizontal_container">
+                        <TextView android:text="Indie" style="@style/select_interest_item_profile" />
+                        <TextView android:text="Rock" style="@style/select_interest_item_profile" />
+                        <TextView android:text="Classical" style="@style/select_interest_item_profile" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/interests_horizontal_container">
+                        <TextView android:text="EDM" style="@style/select_interest_item_profile" />
+                        <TextView android:text="Soothing" style="@style/select_interest_item_profile" />
+                        <TextView android:text="Metal" style="@style/select_interest_item_profile" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/interests_horizontal_container">
+                        <TextView android:text="Art" style="@style/select_interest_item_profile" />
+                        <TextView android:text="Aesthetics" style="@style/select_interest_item_profile" />
+                        <TextView android:text="History" style="@style/select_interest_item_profile" />
+                    </LinearLayout>
+                    <LinearLayout style="@style/interests_horizontal_container">
+                        <TextView android:text="Ethnic" style="@style/select_interest_item_profile" />
+                        <TextView android:text="Fashion" style="@style/select_interest_item_profile" />
+                        <TextView android:text="Colors" style="@style/select_interest_item_profile" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="4dp"
+                        style="@style/interests_horizontal_container">
+                        <TextView android:text="Soul" style="@style/select_interest_item_profile" />
+                        <TextView android:text="Serene" style="@style/select_interest_item_profile" />
+                        <TextView android:text="Bands" style="@style/select_interest_item_profile" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/SaveBtn"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_button"
+        android:backgroundTint="#EE6337"
+        android:fontFamily="@font/clash_700"
+        android:text="Save"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="15dp"
+        android:onClick="submit"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

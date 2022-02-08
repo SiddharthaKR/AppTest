@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Alcheringa2022</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="already_hav">
+        Already have an account?\nLogin here
+    </string>
+
+    <string name="or">
+        Or
+    </string>
+    <string name="password">
+        Password
+    </string>
+    <string name="email_addre">
+        Email Address
+    </string>
+    <string name="name">
+        Name
+    </string>
+    <string name="create_an_a">
+        Create an account
+    </string>
+    <string name="continue_with_outlook">
+        Continue with Outlook
+    </string>
+    <string name="continue_with_google">
+        Continue with Google
+    </string>
+    <string name="title_activity_testing">testing_activity</string>
+
+    <string name="title_activity_add_address">Add_Address_Activity</string>
+
+    <string name="web_client_id">671924222085-as1eeb5n4mf0q88g9sugdri43i09k178.apps.googleusercontent.com</string>
+    <string name="empty_shopping_cart">Empty Shopping Cart</string>
+    <string name="select_size">Select Size</string>
+    <string name="default_decimal_place">00</string>
+    <string name="title_activity_event_description">event_description_activity</string>
+
+
+</resources>
